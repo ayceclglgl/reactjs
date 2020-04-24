@@ -7,6 +7,7 @@ import AuthService from './services/AuhService';
 const App = () => { // equalt to const App = function => { ...
   const buttonText = { text: 'Click me!' };
   const labelText = 'Enter name:';
+  const authService = new AuthService();
 
   //'{}' is using for JS codes like {labelText}
   // If you want to show another component you have to use GSX tags
@@ -16,7 +17,7 @@ const App = () => { // equalt to const App = function => { ...
         {labelText}   
       </label>
       <input id="name" type="text" />
-      <button style={{ backgroundColor: 'blue', color: 'white' }} onClick= { () => {new AuthService().login();}}>
+      <button style={{ backgroundColor: 'blue', color: 'white' }} onClick= { () => {authService.login();}}>
         {buttonText.text}
       </button>
     </div>
