@@ -1,8 +1,8 @@
-import { Log, User, UserManager } from 'oidc-client';
+import { Log, User, UserManager } from "oidc-client";
 
-import { Constants } from './Constants';
+import { Constants } from "./Constants";
 
-export class AuthService {
+class AuthService {
   public userManager: UserManager;
 
   constructor() {
@@ -13,8 +13,8 @@ export class AuthService {
       silent_redirect_uri: `${Constants.clientRoot}silent-renew.html`,
       // tslint:disable-next-line:object-literal-sort-keys
       post_logout_redirect_uri: `${Constants.clientRoot}`,
-      response_type: 'code',
-      scope: Constants.clientScope
+      response_type: "code",
+      scope: Constants.clientScope,
     };
     this.userManager = new UserManager(settings);
 
