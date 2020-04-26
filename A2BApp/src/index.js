@@ -14,10 +14,7 @@ const App = () => {
   return (
     // return JSX (JSX will turn into JS with Babel(https://babeljs.io/))
     <div className="App">
-      <Header
-        pageTitle={welcomeMsg}
-        logoSrc={process.env.PUBLIC_URL + "/favicon.ico"}
-      />
+      <Header pageTitle={welcomeMsg} />
       <div className="container-fluid">
         <div className="row">
           <div className="col">
